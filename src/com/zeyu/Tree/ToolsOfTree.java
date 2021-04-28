@@ -46,7 +46,7 @@ public class ToolsOfTree {
         List<Integer> list = new ArrayList<>();
         Queue<MyTreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
-        boolean stop = false; // stop == true when the last layer of the tree are all null value TreeNode
+        boolean stop = false; // "stop == true" when the last layer of the tree are all null value TreeNode
         while (!queue.isEmpty() && !stop) {
             stop = true;
             int size = queue.size();
@@ -70,6 +70,7 @@ public class ToolsOfTree {
             }
         }
 
+        // soft delete the null value in the tail of the list
         int last = list.size();
         for (int i = list.size() - 1; i >= 0; i--) {
             if (list.get(i) == null) {
@@ -79,6 +80,7 @@ public class ToolsOfTree {
             }
         }
 
+        // transfer results
         Integer[] result = new Integer[list.size()];
         for (int i = 0; i < last; i++) {
             result[i] = list.get(i);
