@@ -1,7 +1,5 @@
 package com.zeyu.Tree;
 
-import com.zeyu.GraphSearchAlgorithms.LayerOrderTraversal;
-
 import java.util.*;
 
 /**
@@ -48,7 +46,7 @@ public class ToolsOfTree {
         List<Integer> list = new ArrayList<>();
         Queue<MyTreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
-        boolean stop = false;
+        boolean stop = false; // stop == true when the last layer of the tree are all null value TreeNode
         while (!queue.isEmpty() && !stop) {
             stop = true;
             int size = queue.size();

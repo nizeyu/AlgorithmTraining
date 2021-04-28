@@ -14,5 +14,4 @@ public class MyTreeNode {
     public MyTreeNode(Integer key) {
         this.key = key;
     }
-
 }
